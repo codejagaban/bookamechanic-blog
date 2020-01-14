@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "mblogs",
+  "info": {
+    "name": "mblog",
+    "description": "All mchanic blog articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "minLength": 1,
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "author": {
+      "model": "user",
+      "via": "mblogs",
+      "plugin": "users-permissions"
+    },
+    "content": {
+      "required": true,
+      "type": "richtext"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

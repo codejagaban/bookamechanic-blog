@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "category",
+    "description": "A category in which a blog post falls under"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "category": {
+      "required": true,
+      "type": "string"
+    }
+  }
+}

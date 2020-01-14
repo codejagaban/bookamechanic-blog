@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mblogs",
+      "handler": "Mblog.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mblogs/count",
+      "handler": "Mblog.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mblogs/:id",
+      "handler": "Mblog.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mblogs",
+      "handler": "Mblog.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mblogs/:id",
+      "handler": "Mblog.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mblogs/:id",
+      "handler": "Mblog.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
